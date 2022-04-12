@@ -48,7 +48,6 @@ figcaption {
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: calc(100% / 3.5);
   margin: 50px auto;
   background-color: #283e50;
   color: white;
@@ -107,23 +106,14 @@ figcaption {
     width: calc(100% / 2.7);
     max-width: 640px;
   }
-}
-
-@media (min-width: 769px) {
   .box__image {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
   }
-}
-
-@media (min-width: 769px) {
   figure {
     width: calc(100% / 2.5);
   }
-}
-
-@media (min-width: 769px) {
   figcaption {
     font-size: 12px;
   }
