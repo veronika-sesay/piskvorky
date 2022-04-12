@@ -11,8 +11,9 @@ html {
 
 h1 {
   font-family: 'Lobster', cursive;
-  font-size: 44px;
+  font-size: 48px;
   text-align: center;
+  color: white;
 }
 
 p {
@@ -117,4 +118,89 @@ figcaption {
   figcaption {
     font-size: 12px;
   }
+}
+
+/*---styly pro hru---*/
+
+.game {
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+  max-width: 80vmin;
+  color: white;
+}
+
+.game p {
+  font-size: 30px;
+  font-family: sans-serif;
+}
+
+.game__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 20%;
+  padding-bottom: 3%;
+}
+
+.menu__player {
+  display: flex;
+  align-items: center;
+}
+
+#circle {
+  display: inline-block;
+  filter: invert(100%);
+}
+
+.menu__icons {
+  min-width: 18%;
+}
+
+#home,
+#restart {
+  width: 70%;
+}
+
+.button__icons {
+  width: 43%;
+  aspect-ratio: 1/1;
+  background-color: #1fcca4;
+  border-radius: 5px;
+  border: transparent;
+  margin: 2%;
+  opacity: 1;
+}
+
+.button__icons:hover {
+  background-color: #1cbb96;
+}
+
+.button__icons--restart {
+  background-color: #0197f6;
+}
+
+.button__icons--restart:hover {
+  background-color: #0090e9;
+}
+
+.game__field {
+  font-size: 0;
+}
+
+button {
+  width: 10%;
+  aspect-ratio: 1/1;
+  opacity: 0.5;
+  border: 3px solid black;
+  margin: 0;
+  padding: 0;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+button:focus {
+  opacity: 0.7;
 }
