@@ -211,7 +211,7 @@ button:focus {
 /*---styly pro hraní hry---*/
 
 .game__field--circle {
-  background-image: url('/obrazky/circle.svg');
+  background-image: url('obrazky/circle.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 75%;
@@ -222,7 +222,7 @@ button:focus {
 }
 
 .game__field--cross {
-  background-image: url('/obrazky/cross.svg');
+  background-image: url('obrazky/cross.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 75%;
