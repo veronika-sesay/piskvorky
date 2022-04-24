@@ -216,7 +216,7 @@ button:focus {
   background-position: center;
   background-size: 75%;
   opacity: 1;
-  animation-name: popout;
+  animation-name: popin;
   animation-duration: 0.25s;
   animation-timing-function: ease-in;
 }
