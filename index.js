@@ -11,7 +11,7 @@ const turn = (event) => {
   } else {
     player = 'circle';
   }
-  document.querySelector('.current-player').src = `/obrazky/${player}.svg`;
+  document.querySelector('.current-player').src = `obrazky/${player}.svg`;
 };
 
 for (let i = 0; i < field.length; i += 1) {
