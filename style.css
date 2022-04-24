@@ -185,6 +185,7 @@ figcaption {
 
 .game__field {
   line-height: 0;
+  border: 2px solid black;
 }
 
 button {
@@ -196,9 +197,49 @@ button {
 }
 
 button:hover {
+  cursor: pointer;
   opacity: 0.7;
+  outline: auto;
 }
 
 button:focus {
+  cursor: pointer;
   opacity: 0.7;
+  outline: auto;
+}
+
+/*---styly pro hraní hry---*/
+
+.game__field--circle {
+  background-image: url('/obrazky/circle.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75%;
+  opacity: 1;
+  animation-name: popout;
+  animation-duration: 0.25s;
+  animation-timing-function: ease-in;
+}
+
+.game__field--cross {
+  background-image: url('/obrazky/cross.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 75%;
+  opacity: 1;
+  animation-name: popin;
+  animation-duration: 0.3s;
+  animation-timing-function: ease;
+}
+
+@keyframes popin {
+  from {
+    background-size: 10%;
+  }
+  50% {
+    background-size: 50%;
+  }
+  to {
+    background-size: 75%;
+  }
 }
