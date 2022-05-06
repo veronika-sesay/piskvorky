@@ -37,11 +37,9 @@ const getField = (row, column) => {
 
 const getSymbol = (field) => {
   if (field.classList.contains('game__field--cross')) {
-    console.log('cross');
     return 'cross';
   }
   if (field.classList.contains('game__field--circle')) {
-    console.log('circle');
     return 'circle';
   }
 };
@@ -63,6 +61,7 @@ const isWinningMove = (field) => {
   const symbol = getSymbol(field);
 
   let i;
+  let d;
 
   let inRow = 1; // Jednička pro právě vybrané políčko
   // Koukni doleva
@@ -105,6 +104,59 @@ const isWinningMove = (field) => {
   }
 
   if (inColumn >= symbolsToWin) {
+    return true;
+  }
+
+  let inDiagonal = 1; // Jednička pro právě vybrané políčko
+  // Koukni doleva nahoru
+  i = origin.column;
+  d = origin.row;
+  while (i > 0 && d > 0 && symbol === getSymbol(getField(d - 1, i - 1))) {
+    inDiagonal++;
+    i--;
+    d--;
+  }
+
+  // Koukni doleva dolu
+  i = origin.column;
+  d = origin.row;
+  while (
+    i > 0 &&
+    d < boardSize - 1 &&
+    symbol === getSymbol(getField(d + 1, i - 1))
+  ) {
+    inDiagonal++;
+    i--;
+    d++;
+  }
+
+  // Koukni doprava nahoru
+  i = origin.column;
+  d = origin.row;
+  while (
+    i < boardSize - 1 &&
+    d > 0 &&
+    symbol === getSymbol(getField(d - 1, i + 1))
+  ) {
+    inDiagonal++;
+    i++;
+    d--;
+  }
+
+  // Koukni doprava dolu
+  i = origin.column;
+  d = origin.row;
+  while (
+    i < boardSize - 1 &&
+    d < boardSize - 1 &&
+    symbol === getSymbol(getField(d + 1, i + 1))
+  ) {
+    inDiagonal++;
+    i++;
+    d++;
+  }
+
+  if (inDiagonal >= symbolsToWin) {
     return true;
   }
 
