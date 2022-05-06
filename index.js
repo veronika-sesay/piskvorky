@@ -5,16 +5,22 @@ console.log('funguju');
 let fields = document.querySelectorAll('.field__button');
 
 let player = 'circle';
+let winner;
 const turn = (event) => {
   event.target.classList.add(`game__field--${player}`);
   event.target.disabled = true;
   if (isWinningMove(event.target) === true) {
-    alert(`Vyhrává ${player}`);
+    let confirmation = confirm(`Vyhrává ${winner}. Spustit novou hru?`);
+    if (confirmation === true) {
+      location.reload();
+    }
   }
   if (player === 'circle') {
     player = 'cross';
+    winner = 'křížek';
   } else {
     player = 'circle';
+    winner = 'kolečko';
   }
   document.querySelector('.current-player').src = `obrazky/${player}.svg`;
 };
